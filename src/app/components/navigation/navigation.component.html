@@ -1,0 +1,25 @@
+<nav>
+    <mat-toolbar color="primary" class="mat-typography toolbar-shadow">
+        <img src="assets/travis-kosarek-header.png" />
+        <span class="spacer"></span>
+        <button mat-icon-button aria-label="menu button" [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <a href="#whoiam" mat-menu-item>WHO I AM</a>
+            <a href="#concepts" mat-menu-item>CONCEPTS I BELIEVE IN</a>
+            <a href="#experience" mat-menu-item>PROFESSIONAL EXPERIENCE</a>
+            <a href="#skills" mat-menu-item>SKILLS</a>
+            <a href="#projects" mat-menu-item>CURRENT PROJECTS</a>
+            <a href="#contact" mat-menu-item>CONTACT</a>
+        </mat-menu>
+        <!-- <div>
+              <a href="#whoiam" mat-menu-item>WHO I AM</a>
+              <a href="#concepts" mat-menu-item>CONCEPTS I BELIEVE IN</a>
+              <a href="#experience" mat-menu-item>PROFESSIONAL EXPERIENCE</a>
+              <a href="#skills" mat-menu-item>SKILLS</a>
+              <a href="#projects" mat-menu-item>CURRENT PROJECTS</a>
+              <a href="#contact" mat-menu-item>CONTACT</a>
+          </div> -->
+    </mat-toolbar>
+</nav>
