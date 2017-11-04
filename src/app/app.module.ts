@@ -10,7 +10,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { BiographyComponent } from './components/biography/biography.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ConceptsComponent } from './components/concepts/concepts.component';
-import { TechnologyComponent } from './components/technology/technology.component';
+import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 
@@ -34,7 +34,7 @@ export class PortfolioMaterialModule {}
     BiographyComponent,
     ExperienceComponent,
     ConceptsComponent,
-    TechnologyComponent,
+    SkillsComponent,
     ProjectsComponent
   ],
   imports: [
