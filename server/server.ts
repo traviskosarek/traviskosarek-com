@@ -2,6 +2,7 @@
 
 import * as bodyParser from 'body-parser';
 import * as compression from 'compression';
+import * as cors from 'cors';
 import * as express from 'express';
 import {
   Express
@@ -51,9 +52,10 @@ export default class Server {
     this.server = express();
     this.config = config;
 
+    this.server.use(cors());
+
     this.insertMiddleware();
     this.setApplicationCodePath();
-    this.serveApiRoutes();
   }
 
   /**
@@ -80,17 +82,6 @@ export default class Server {
       limit: '100mb'
     }));
     this.server.use(compression());
-  }
-
-  /**
-   * Helper method to serve development documenation
-   *
-   * @private
-   */
-  private serveApiRoutes() {
-    this.server.get('/api/services/', (req, res) => {
-      res.redirect('/api/services/');
-    });
   }
 
   /**
