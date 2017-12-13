@@ -3,12 +3,18 @@
 import * as bodyParser from 'body-parser';
 import * as compression from 'compression';
 import * as express from 'express';
-import { Express } from 'express';
+import {
+  Express
+} from 'express';
 import * as path from 'path';
 
-import { IEnvironment } from './shared/environment';
+import {
+  IEnvironment
+} from './shared/environment';
 import Configuration from './configuration/configuration';
-import { Route } from './shared/route';
+import {
+  Route
+} from './shared/route';
 
 /**
  * Represents an Express server
@@ -45,21 +51,9 @@ export default class Server {
     this.server = express();
     this.config = config;
 
-    this.setApiPaths();
     this.insertMiddleware();
     this.setApplicationCodePath();
-  }
-
-  /**
-   * Helper method to map documenation output path to a route
-   *
-   * @private
-   */
-  private setApiPaths() {
-    this.server.use(
-      '/api/services',
-      express.static(path.join(Configuration.rootDirectory, '/api/services'))
-    );
+    this.serveApiRoutes();
   }
 
   /**
@@ -82,21 +76,22 @@ export default class Server {
    * @private
    */
   private insertMiddleware() {
-    this.server.use(bodyParser.json({ limit: '100mb' }));
+    this.server.use(bodyParser.json({
+      limit: '100mb'
+    }));
     this.server.use(compression());
   }
 
-  // /**
-  //  * Helper method to serve development documenation
-  //  *
-  //  * @private
-  //  */
-  // private serveApiRoutes() {
-  //   this.server.get('/api/services/', (req, res) => {
-  //       res.serve()
-  //         res.sendFile(path.join(Configuration.rootDirectory, '/doc/dev/index.html'));
-  //     });
-  // }
+  /**
+   * Helper method to serve development documenation
+   *
+   * @private
+   */
+  private serveApiRoutes() {
+    this.server.get('/api/services/', (req, res) => {
+      res.redirect('/api/services/');
+    });
+  }
 
   /**
    * Sets the router for the server.
