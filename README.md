@@ -4,7 +4,7 @@ This purpose of this project is to help showcase some of my skills as a develope
 
 ## Want to use this as a template for your own website?
 
-Great, feel free to do so! This code is licensed under the MIT license, so I would appreciate a mention that I had originally helped to inspire you to work on your own website. Mentioning my name (Travis Kosarek) should be sufficient, but linking to my website traviskosarek.com is also encouraged!
+Great, feel free to do so! This code is licensed under the MIT license, but I would appreciate a mention that I had originally helped to inspire you to work on your own website. Mentioning my name (Travis Kosarek) would be sufficient, but linking to my website traviskosarek.com is also encouraged!
 
 ## Running the code
 
