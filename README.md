@@ -1,27 +1,41 @@
 # traviskosarek.com
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.8.
+This purpose of this project is to help showcase some of my skills as a developer as well as to provide a digital portfolio to share some of the projects I actively contribute to.
 
-## Development server
+## Want to use this as a template for your own website?
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Great, feel free to do so! This code is licensed under the MIT license, so I would appreciate a mention that I had originally helped to inspire you to work on your own website. Mentioning my name (Travis Kosarek) should be sufficient, but linking to my website traviskosarek.com is also encouraged!
 
-## Code scaffolding
+## Running the code
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Install [Node](https://nodejs.org/en/)
+2. Run `npm install` in the root directory to install all Node dependencies
+3. Run `npm start` to start and launch the website
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+The `npm start` command does not output files to be hosted on an actual web server. In order to build the application as it would be hosted, execute the command `npm run build`.
+
+To build the application for production, instead execute the command `npm run build:production`.
+
+All build artifacts will be outputted in a `/dist` folder.
+
+## Linting
+
+Ensuring that code stays uniform is important to keeping a clean, easily navigatable project. To keep my code clean I use TSLint to valiadate my project during the build process.
+
+To run the linting service, execute the `npm run lint` command.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To run unit tests within the project, execute the command `npm run test`. The tests will run via the [Karma Test Runner](https://karma-runner.github.io).
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+I currently do not have any end-to-end tests on this project, but soon will be creating these!
 
-## Further help
+In order to run functional tests, execute the `npm run e2e` command to run the tests via [Protractor](http://www.protractortest.org/).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Special Mentions
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.8. I encourage you to go check out the Angular CLI project, it is a really awesome way to get started developing in Angular.
