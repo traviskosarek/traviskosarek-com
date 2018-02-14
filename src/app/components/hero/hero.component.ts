@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'portfolio-hero',
-  templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.scss']
+  selector: "portfolio-hero",
+  templateUrl: "./hero.component.html",
+  styleUrls: ["./hero.component.scss"]
 })
 export class HeroComponent implements OnInit {
 

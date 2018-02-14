@@ -1,13 +1,13 @@
-'use strict';
+"use strict";
 
-import 'jasmine';
+import "jasmine";
 
-import Configuration from './configuration';
-import { DevelopmentEnvironment } from './development-environment';
-import { ProductionEnvironment } from './production-environment';
-import { LocalEnvironment } from './local-environment';
+import Configuration from "./configuration";
+import { DevelopmentEnvironment } from "./development-environment";
+import { ProductionEnvironment } from "./production-environment";
+import { LocalEnvironment } from "./local-environment";
 
-describe('Configuration', () => {
+describe("Configuration", () => {
     const prod = new ProductionEnvironment();
     const dev = new DevelopmentEnvironment();
     const local = new LocalEnvironment();
@@ -30,19 +30,19 @@ describe('Configuration', () => {
         Configuration.config = undefined;
     });
 
-    it('should set configuration to production', () => {
-        process.env.NODE_ENV = 'production';
+    it("should set configuration to production", () => {
+        process.env.NODE_ENV = "production";
 
         expect(Configuration.instance()).toEqual(prod);
     });
 
-    it('should set configuration to development', () => {
-        process.env.NODE_ENV = 'development';
+    it("should set configuration to development", () => {
+        process.env.NODE_ENV = "development";
 
         expect(Configuration.instance()).toEqual(dev);
     });
 
-    it('should set configuration to local', () => {
+    it("should set configuration to local", () => {
         process.env.NODE_ENV = undefined;
 
         expect(Configuration.instance()).toEqual(local);

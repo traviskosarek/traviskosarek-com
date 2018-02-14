@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-import * as path from 'path';
+import * as path from "path";
 
-import { ENVIRONMENT, IEnvironment } from '../shared/environment';
-import { DevelopmentEnvironment } from './development-environment';
-import { ProductionEnvironment } from './production-environment';
-import { LocalEnvironment } from './local-environment';
+import { ENVIRONMENT, IEnvironment } from "../shared/environment";
+import { DevelopmentEnvironment } from "./development-environment";
+import { ProductionEnvironment } from "./production-environment";
+import { LocalEnvironment } from "./local-environment";
 
 /**
  * A singleton representing the current configuration settings
@@ -24,7 +24,7 @@ export default class Configuration {
      * The root directory of the application - this will be one step outside the app folder.
      * @type {string}
      */
-    public static rootDirectory: string = path.join(__dirname + '/../../');
+    public static rootDirectory: string = path.join(__dirname + "/../../");
 
     /**
      * The current environment the application is hosted in
@@ -39,9 +39,9 @@ export default class Configuration {
      */
     public static instance(): IEnvironment {
         if (this.config === undefined) {
-            if (process.env.NODE_ENV === 'production') {
+            if (process.env.NODE_ENV === "production") {
                 this.config = new ProductionEnvironment();
-            } else if (process.env.NODE_ENV === 'development') {
+            } else if (process.env.NODE_ENV === "development") {
                 this.config = new DevelopmentEnvironment();
             } else {
                 this.config = new LocalEnvironment();

@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'portfolio-root',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  selector: "portfolio-root",
+  templateUrl: "./portfolio.component.html",
+  styleUrls: ["./portfolio.component.scss"]
 })
 export class PortfolioComponent {
-  title = 'portfolio';
+  title = "portfolio";
 }

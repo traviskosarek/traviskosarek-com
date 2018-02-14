@@ -1,21 +1,21 @@
-'use strict';
+"use strict";
 
-import * as bodyParser from 'body-parser';
-import * as compression from 'compression';
-import * as cors from 'cors';
-import * as express from 'express';
+import * as bodyParser from "body-parser";
+import * as compression from "compression";
+import * as cors from "cors";
+import * as express from "express";
 import {
   Express
-} from 'express';
-import * as path from 'path';
+} from "express";
+import * as path from "path";
 
 import {
   IEnvironment
-} from './shared/environment';
-import Configuration from './configuration/configuration';
+} from "./shared/environment";
+import Configuration from "./configuration/configuration";
 import {
   Route
-} from './shared/route';
+} from "./shared/route";
 
 /**
  * Represents an Express server
@@ -64,12 +64,12 @@ export default class Server {
    */
   private setApplicationCodePath() {
     this.server.use(
-      '/',
-      express.static(path.join(Configuration.rootDirectory, '/'))
+      "/",
+      express.static(path.join(Configuration.rootDirectory, "/"))
     );
     this.server.use(
-      '/images',
-      express.static(path.join(Configuration.rootDirectory, '/images'))
+      "/images",
+      express.static(path.join(Configuration.rootDirectory, "/images"))
     );
   }
 
@@ -79,7 +79,7 @@ export default class Server {
    */
   private insertMiddleware() {
     this.server.use(bodyParser.json({
-      limit: '100mb'
+      limit: "100mb"
     }));
     this.server.use(compression());
   }
@@ -98,7 +98,7 @@ export default class Server {
   public startServer() {
     this.server.listen(this.config.port, () => {
       this.startTime = Date.now();
-      console.log('angular-example is now running on port', this.config.port);
+      console.log("angular-example is now running on port", this.config.port);
     });
   }
 }

@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-import * as express from 'express';
-import {Router} from 'express';
+import * as express from "express";
+import {Router} from "express";
 
 /**
  * Represents a Route exposed by this server

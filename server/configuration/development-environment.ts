@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-import { ENVIRONMENT, IEnvironment } from '../shared/environment';
+import { ENVIRONMENT, IEnvironment } from "../shared/environment";
 
 /**
  * A class representing the environment settings for the development environment

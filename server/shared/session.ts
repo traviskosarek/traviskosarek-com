@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
 namespace Express {
-    'use strict';
+    "use strict";
     export interface Session {
         corpId: string;
         name: string;
