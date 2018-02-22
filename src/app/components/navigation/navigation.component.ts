@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, ElementRef, HostListener, ViewChild } from "@angular/core";
+import { Component, OnInit, AfterViewInit, Input, ElementRef, HostListener, ViewChild } from "@angular/core";
 
 @Component({
   selector: "portfolio-navigation",
   templateUrl: "./navigation.component.html",
   styleUrls: ["./navigation.component.scss"]
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent implements OnInit, AfterViewInit {
   public sticky: boolean;
 
   public top: number;
@@ -16,7 +16,10 @@ export class NavigationComponent implements OnInit {
   constructor(public element: ElementRef) {}
 
   ngOnInit() {
-    this.top = this.element.nativeElement.offsetTop;
+  }
+
+  ngAfterViewInit() {
+    this.onResize(undefined);
   }
 
   @HostListener("window:resize", ["$event"])
