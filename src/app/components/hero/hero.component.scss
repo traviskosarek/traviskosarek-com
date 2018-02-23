@@ -20,12 +20,6 @@
     min-width: 360px;
     min-height: calc(100vh - 58px);
     text-align: right;
-    .top-xs {
-        height: 56px;
-    }
-    .top-sm {
-        height: 64px;
-    }
     .hero-image {
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.6) 100%), url("/assets/hero.png");
         height: calc(100vh - 58px);

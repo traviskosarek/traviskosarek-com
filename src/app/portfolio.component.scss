@@ -1,12 +1,7 @@
-/* Style the navbar */
-
 #navbar {
     overflow: hidden;
     background-color: #333;
 }
-
-
-/* Page content */
 
 .content {
     padding: 16px;
@@ -19,4 +14,18 @@ p {
     position: fixed;
     background-color: #FFFFFF;
     color: #000000;
+}
+
+a.anchor-xs {
+    display: block;
+    position: relative;
+    top: -56px;
+    visibility: hidden;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -64px;
+    visibility: hidden;
 }

@@ -1,7 +1,8 @@
+<div *ngIf="sticky" fxHide="true" fxShow.xs class="space-xs"></div>
+<div *ngIf="sticky" fxHide="true" fxShow.sm fxShow.gt-sm class="space"></div>
 <nav #navbar>
     <mat-toolbar color="primary" class="mat-typography toolbar-shadow">
         <img fxHide="true" fxShow.xs fxShow.sm src="assets/travis-kosarek-header.png" />
-        <!-- <img fxHide="true" *ngIf="sticky" fxShow.gt-sm src="assets/travis-kosarek-header.png" /> -->
         <span class="spacer"></span>
         <a fxHide="true" fxShow.gt-sm href="#whoiam" mat-menu-item>WHO I AM</a>
         <a fxHide="true" fxShow.gt-sm href="#concepts" mat-menu-item>CONCEPTS I BELIEVE IN</a>
@@ -14,12 +15,18 @@
           <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-            <a href="#whoiam" mat-menu-item>WHO I AM</a>
-            <a href="#concepts" mat-menu-item>CONCEPTS I BELIEVE IN</a>
-            <a href="#experience" mat-menu-item>PROFESSIONAL EXPERIENCE</a>
-            <a href="#skills" mat-menu-item>SKILLS</a>
-            <a href="#projects" mat-menu-item>CURRENT PROJECTS</a>
-            <a href="#contact" mat-menu-item>CONTACT</a>
+            <a href="#whoiam-mobile" fxHide="true" fxShow.xs mat-menu-item>WHO I AM</a>
+            <a href="#whoiam" fxHide="true" fxShow.sm fxShow.gt-sm mat-menu-item>WHO I AM</a>
+            <a href="#concepts-mobile" fxHide="true" fxShow.xs mat-menu-item>CONCEPTS I BELIEVE IN</a>
+            <a href="#concepts" fxHide="true" fxShow.sm fxShow.gt-sm mat-menu-item>CONCEPTS I BELIEVE IN</a>
+            <a href="#experience-mobile" fxHide="true" fxShow.xs mat-menu-item>PROFESSIONAL EXPERIENCE</a>
+            <a href="#experience" fxHide="true" fxShow.sm fxShow.gt-sm mat-menu-item>PROFESSIONAL EXPERIENCE</a>
+            <a href="#skills-mobile" fxHide="true" fxShow.xs mat-menu-item>SKILLS</a>
+            <a href="#skills" fxHide="true" fxShow.sm fxShow.gt-sm mat-menu-item>SKILLS</a>
+            <a href="#projects-mobile" fxHide="true" fxShow.xs mat-menu-item>CURRENT PROJECTS</a>
+            <a href="#projects" fxHide="true" fxShow.sm fxShow.gt-sm mat-menu-item>CURRENT PROJECTS</a>
+            <a href="#contact-mobile" fxHide="true" fxShow.xs mat-menu-item>CONTACT</a>
+            <a href="#contact" fxHide="true" fxShow.sm fxShow.gt-sm mat-menu-item>CONTACT</a>
         </mat-menu>
     </mat-toolbar>
 </nav>

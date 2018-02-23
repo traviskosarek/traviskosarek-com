@@ -13,13 +13,15 @@ export class NavigationComponent implements OnInit, AfterViewInit {
   @ViewChild("navbar")
   public navbar: ElementRef;
 
-  constructor(public element: ElementRef) {}
+  constructor(public element: ElementRef) {
+  }
 
   ngOnInit() {
+    this.onResize(undefined);
   }
 
   ngAfterViewInit() {
-    this.onResize(undefined);
+    // this.onResize(undefined);
   }
 
   @HostListener("window:resize", ["$event"])
