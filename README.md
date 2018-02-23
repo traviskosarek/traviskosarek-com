@@ -38,4 +38,4 @@ In order to run functional tests, execute the `npm run e2e` command to run the t
 
 ## Special Mentions
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.8. I encourage you to go check out the Angular CLI project, it is a really awesome way to get started developing in Angular.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.8. I encourage you to go check out the Angular CLI project, it is a really awesome way to get started developing in Angular
