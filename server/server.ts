@@ -55,7 +55,28 @@ export default class Server {
     this.server.use(cors());
 
     this.insertMiddleware();
+    this.enableHealthCheck();
+    this.setLetsEncryptPath();
     this.setApplicationCodePath();
+  }
+
+  /**
+   * Helper method to map app folder to a route
+   * @private
+   */
+  private enableHealthCheck() {
+    this.server.get("/health-check", (req, res) => res.sendStatus(200));
+  }
+
+  /**
+   * Helper method to map app folder to a route
+   * @private
+   */
+  private setLetsEncryptPath() {
+    // this.server.use(
+    //   "/",
+    //   express.static(path.join(Configuration.rootDirectory, "/"))
+    // );
   }
 
   /**
@@ -66,10 +87,6 @@ export default class Server {
     this.server.use(
       "/",
       express.static(path.join(Configuration.rootDirectory, "/"))
-    );
-    this.server.use(
-      "/images",
-      express.static(path.join(Configuration.rootDirectory, "/images"))
     );
   }
 
