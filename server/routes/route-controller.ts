@@ -12,15 +12,18 @@ import { Route } from "../shared/route";
  * @class Routes
  */
 export default class RouteController extends Route {
-    public constructor () {
-        super("/");
+  public constructor() {
+    super("/");
 
-      this.Router.get("/", this.getHomePage);
-      this.Router.use(this.getHomePage);
+    this.Router.get("/", this.getHomePage);
+    this.Router.use(this.redirectToHomePage);
+  }
 
-    }
+  private getHomePage(req: Request, res: Response): void {
+    res.sendFile(path.join(Configuration.rootDirectory, "/index.html"));
+  }
 
-    private getHomePage(req: Request, res: Response): void {
-        res.sendFile(path.join(Configuration.rootDirectory, "/index.html"));
-    }
+  private redirectToHomePage(req: Request, res: Response): void {
+    res.redirect("/");
+  }
 }
