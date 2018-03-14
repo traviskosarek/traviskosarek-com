@@ -73,10 +73,10 @@ export default class Server {
    * @private
    */
   private setLetsEncryptPath() {
-    // this.server.use(
-    //   "/",
-    //   express.static(path.join(Configuration.rootDirectory, "/"))
-    // );
+    this.server.use(
+      "/.well-known/acme-challenge",
+      express.static("/usr/share/nginx/html/.well-known/acme-challenge")
+    );
   }
 
   /**
