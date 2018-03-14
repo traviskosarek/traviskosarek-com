@@ -15,7 +15,9 @@ export default class RouteController extends Route {
     public constructor () {
         super("/");
 
-        this.Router.get("/", this.getHomePage);
+      this.Router.get("/", this.getHomePage);
+      this.Router.use(this.getHomePage);
+
     }
 
     private getHomePage(req: Request, res: Response): void {
