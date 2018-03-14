@@ -16,9 +16,6 @@ export default class RouteController extends Route {
         super("/");
 
         this.Router.get("/", this.getHomePage);
-        this.Router.get("/application/:id", this.getHomePage);
-        this.Router.get("/scrumteamview", this.getHomePage);
-        this.Router.get("/apphealthview", this.getHomePage);
     }
 
     private getHomePage(req: Request, res: Response): void {

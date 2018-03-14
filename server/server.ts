@@ -98,7 +98,7 @@ export default class Server {
   public startServer() {
     this.server.listen(this.config.port, () => {
       this.startTime = Date.now();
-      console.log("angular-example is now running on port", this.config.port);
+      console.log("traviskosarek-com is now running on port", this.config.port);
     });
   }
 }
