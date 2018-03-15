@@ -73,9 +73,10 @@ export default class Server {
    * @private
    */
   private setLetsEncryptPath() {
-    this.server.get("/.well-known/acme-challenge/:id", (req, res) => {
-      res.sendFile(req.params.id, { root: path.join("usr", "share", "nginx", "html", ".well-known", "acme-challenge") });
-    });
+    this.server.use("/.well-known/acme-challenge", express.static(path.resolve("/usr", "share", "nginx", "html", ".well-known", "acme-challenge")));
+    // this.server.get("/.well-known/acme-challenge/:id", (req, res) => {
+    //   res.sendFile(req.params.id, { root: path.resolve("/usr", "share", "nginx", "html", ".well-known", "acme-challenge") });
+    // });
   }
 
   /**
