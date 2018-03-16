@@ -56,7 +56,6 @@ export default class Server {
 
     this.insertMiddleware();
     this.enableHealthCheck();
-    // this.setLetsEncryptPath();
     this.setApplicationCodePath();
   }
 
@@ -67,17 +66,6 @@ export default class Server {
   private enableHealthCheck() {
     this.server.get("/health-check", (req, res) => res.sendStatus(200));
   }
-
-  // /**
-  //  * Helper method to map app folder to a route
-  //  * @private
-  //  */
-  // private setLetsEncryptPath() {
-  //   this.server.use("/.well-known/acme-challenge", express.static(path.resolve("/usr", "share", "nginx", "html", ".well-known", "acme-challenge")));
-  //   // this.server.get("/.well-known/acme-challenge/:id", (req, res) => {
-  //   //   res.sendFile(req.params.id, { root: path.resolve("/usr", "share", "nginx", "html", ".well-known", "acme-challenge") });
-  //   // });
-  // }
 
   /**
    * Helper method to map app folder to a route
